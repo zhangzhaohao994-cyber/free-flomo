@@ -29,3 +29,9 @@ SOFTWARE.
 ## AI SDK
 
 Backend dependency `ai` and its transitive dependencies are installed through npm and retain their respective licenses. See package-lock.json and each package license.
+
+## Local speech recognition
+
+The optional browser speech module distributes Transformers.js 3.8.1 (Apache-2.0), ONNX Runtime Web (MIT), and multilingual Whisper tiny quantized weights (MIT). Their complete notices are retained in `public/speech/v1/licenses/`. Transformers.js bundles its browser dependencies; source and release details: https://github.com/huggingface/transformers.js/tree/3.8.1 and https://github.com/microsoft/onnxruntime.
+
+The Whisper weights are from https://huggingface.co/onnx-community/whisper-tiny at revision `ff4177021cc41f7db950912b73ea4fdf7d01d8e7`, derived from OpenAI Whisper: https://github.com/openai/whisper. Asset paths, byte counts, and SHA-256 hashes are recorded in `public/speech/v1/manifest.json`.

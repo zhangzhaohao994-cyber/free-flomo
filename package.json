@@ -11,7 +11,8 @@
     "start": "node --env-file-if-exists=.env server/server.mjs",
     "test": "node --test server/*.test.mjs",
     "check": "node scripts/check.mjs",
-    "create-owner": "node --env-file-if-exists=.env scripts/bootstrap-owner.mjs"
+    "create-owner": "node --env-file-if-exists=.env scripts/bootstrap-owner.mjs",
+    "prepare:speech": "node scripts/prepare-speech.mjs"
   },
   "dependencies": {
     "@ai-sdk/deepseek": "^3.0.67",
@@ -20,6 +21,7 @@
     "express": "^5.3.0"
   },
   "devDependencies": {
+    "@huggingface/transformers": "3.8.1",
     "fflate": "^0.8.3"
   }
 }

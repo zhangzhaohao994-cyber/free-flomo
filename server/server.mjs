@@ -2,6 +2,8 @@ import {changePassword} from './account.mjs';
 import {Readable} from 'node:stream';
 import {createTransfer,writePart,readPart,outgoing,incoming,removeTransfer,findTransfer} from './transfers.mjs';
 import http from 'node:http';
+import {createReadStream} from 'node:fs';
+import {stat} from 'node:fs/promises';
 import { readFile, mkdir } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -80,6 +82,7 @@ export async function createApp(options={}){
     }
     throw fail(404,'没有这个接口');
    }
+   if(req.method==='GET'&&path.startsWith('/public/speech/v1/')){const relative=path.slice('/public/speech/v1/'.length);if(!/^[a-zA-Z0-9_./-]+$/.test(relative)||relative.split('/').includes('..')||!/[.](js|mjs|wasm|onnx|json|txt)$/.test(relative))throw fail(404,'资源不存在');const file=resolve(root,'public/speech/v1',relative);let info;try{info=await stat(file)}catch{throw fail(404,'资源不存在')}if(!info.isFile())throw fail(404,'资源不存在');const ext=relative.split('.').pop(),types={js:'text/javascript',mjs:'text/javascript',wasm:'application/wasm',json:'application/json',txt:'text/plain',onnx:'application/octet-stream'};status=200;res.writeHead(200,{'Content-Type':types[ext],'Content-Length':info.size,'Cache-Control':'public,max-age=3600'});await new Promise((resolve,reject)=>{const stream=createReadStream(file);stream.on('error',reject);res.on('finish',resolve);res.on('close',()=>{stream.destroy();resolve()});stream.pipe(res)});return}
    if(req.method==='GET'&&(path==='/'||path==='/index.html')){await send(200,await readFile(resolve(root,'index.html'),'utf8'),'text/html');return}
    if(req.method==='GET'&&['/sw.js','/manifest.webmanifest','/icon.svg'].includes(path)){const types={'/sw.js':'application/javascript','/manifest.webmanifest':'application/manifest+json','/icon.svg':'image/svg+xml'};await send(200,await readFile(resolve(root,path.slice(1)),'utf8'),types[path]);return}
    if(path==='/favicon.ico'){await send(204,'','text/plain');return}throw fail(404,'页面不存在');

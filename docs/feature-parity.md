@@ -8,7 +8,7 @@
 | 画廊 | 同上 | 已实现图片网格及大图 |
 | Live Photos | 同上 | 未实现原生 Live Photo 动画资源配对 |
 | 系统全局输入、原生桌面/锁屏小组件 | [小组件](https://help.flomoapp.com/membership/widgets.html) | 未实现；网页快捷键与系统小组件不等价 |
-| 语音录音、转写与原文保留 | [语音](https://help.flomoapp.com/ai/aivoice.html) | 浏览器录音、原音频下载与转写适配已写；麦克风、真实语音服务未验收，原音频尚不进入笔记数据库 |
+| 语音录音、转写与原文保留 | [语音](https://help.flomoapp.com/ai/aivoice.html) | 已接通设备内免费Whisper转写、M4A导入、原录音下载/本机暂存、可编辑听校后追加草稿。真实WASM模型和MediaRecorder合成音源测试通过；真实手机麦克风/Safari未验收，原音频尚不随笔记同步/备份 |
 | 多级标签、父级聚合 | [标签](https://help.flomoapp.com/basic/tag.html) | 已实现并验证 |
 | 标签重命名、删除、emoji 前缀、置顶 | 同上、[会员](https://help.flomoapp.com/membership/pro.html) | 重命名已验证；emoji前缀、置顶和每日回顾规则已通过跨设备同步验收。标签移除和标签笔记移入回收站已写，待专门验收 |
 | 多关键词、媒体、无标签、日期范围 | [搜索](https://help.flomoapp.com/advance/search.html) | 文字/图片/链接/无标签/日期已实现；音频、排除标签等完整高级搜索未齐 |

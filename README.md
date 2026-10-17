@@ -1,13 +1,13 @@
 # 免费浮墨 · Free Flomo
 
-最高的独立开源卡片笔记。前端是一个可直接打开的 `index.html`；可选 Node 后端提供账号与同步、API/MCP，以及需要自行配置服务的 AI、语音和微信接入。
+最高的独立开源卡片笔记。前端是一个可直接打开的 `index.html`；可选 Node 后端提供账号与同步、API/MCP，以及需要自行配置服务的 AI 和微信接入。录音转写默认在浏览器内免费运行。
 
 **当前是可用的开发版本，尚未实现 flomo 全功能，也没有证据证明比其 PRO/MAX 更好用。** 逐项状态见 [功能对照](docs/feature-parity.md)。本项目与 flomo 官方无关联，不包含其原始代码、图标或服务凭证。
 
 ## 直接使用
 
 - 在线：[免费浮墨](https://free-flomo-chongchujianghu-s-projects.vercel.app/)（笔记与同步）；[GitHub Pages](https://zhangzhaohao994-cyber.github.io/free-flomo/)（独立前端）
-- 下载本仓库的 `index.html`，用现代浏览器打开。前端无 CDN、字体或框架依赖；ZIP库已内嵌。联网部署同时提供 sw.js 后支持离线重开。
+- 下载本仓库的 `index.html`，用现代浏览器打开。核心笔记无 CDN、字体或框架依赖；ZIP库已内嵌。联网部署同时提供 sw.js 后支持离线重开。免费语音还需要 `public/speech/v1/` 模型及运行时，请从在线网址使用。
 - 默认空白空间；点「先看看示例笔记」可添加 5 条明确标记的原创示例。
 - 本地数据按网址、浏览器和设备隔离。清理浏览器前导出 JSON；换网址也需要导入迁移。
 
@@ -34,13 +34,13 @@ npm start
 ## AI、语音、微信与 MCP
 
 - AI：可直接使用 DeepSeek，服务端配置 `DEEPSEEK_API_KEY`，`DEEPSEEK_MODEL` 默认 `deepseek-flash`（2026-10-18 核对[官方说明](https://api-docs.deepseek.com/)）；无需经过 AI Gateway。也可配置 `AI_GATEWAY_API_KEY`、`AI_MODEL`。语义向量另需 Gateway 与 `EMBEDDING_MODEL`，DeepSeek 对话接口不提供此能力。AI SDK 7 工具循环可搜索当前用户笔记，提出新笔记/提醒，写入由前端明确确认。
-- 语音：浏览器真实录音，原录音可下载；服务端配置兼容 multipart 转写接口的 `SPEECH_API_URL`、`SPEECH_API_KEY`、`SPEECH_MODEL`。未配置不会转写，也不会模拟输出。真实麦克风及实际转写质量尚未验证。
+- 语音：默认设备内 Whisper tiny 量化模型免费转写，无需账号/API Key，不上传音频。首次下载约68MB同源模型及运行时，后续可复用缓存；支持录音及导入M4A/MP3/WAV等浏览器可解码音频，单段最多10分钟/25MB。原录音及听校文字在本机暂存，刷新后可从麦克风恢复，听校后加入草稿。原音频尚不随笔记同步/JSON备份，请单独下载。真实iPhone麦克风/Safari尚未验收。另可选配置服务器 `SPEECH_API_URL`、`SPEECH_API_KEY`、`SPEECH_MODEL`，费用取决于提供商。详见[语音说明](docs/speech.md)。
 - 微信：使用你有权限配置的专用服务号，将回调设为 `https://你的后端/integrations/wechat`，配置 `WECHAT_*`。生成绑定码后在服务号发送「绑定 绑定码」。支持文字、图片，以及 `/搜索 关键词`、`/回顾`、`/解绑`。不支持把本工具伪装成 flomo 官方服务号。未做真实公众号验收，不要直接替换已有账号正在使用的回调。
 - API：`POST /api/notes`，`Authorization: Bearer <专用令牌>`，请求 `{"text":"一个想法 #标签"}`。
 - MCP：`POST /mcp`，使用独立 Bearer 令牌；提供 `search_notes`、`save_note`、`get_memory`。仅完成本地 JSON-RPC 接口测试，尚未通过外部 MCP 客户端互通认证。
 - 提醒：连接后端可保存提醒，当前仅网页打开时提示；没有后台推送。
 
-密钥只在服务器环境变量中配置，不放进 HTML、GitHub 或前端持久化存储。模型和语音调用可能产生服务商费用；开源代码免费不等于云资源免费。
+密钥只在服务器环境变量中配置，不放进 HTML、GitHub 或前端持久化存储。服务器模型和语音调用可能产生服务商费用；设备内转写没有按次推理费，下载会使用流量，托管仍受平台额度限制。
 
 ## 部署
 
