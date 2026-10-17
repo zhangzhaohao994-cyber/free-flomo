@@ -1,0 +1,15 @@
+{
+  "status": "READY",
+  "target": "production",
+  "url": "https://free-flomo-chongchujianghu-s-projects.vercel.app/",
+  "githubPages": "https://zhangzhaohao994-cyber.github.io/free-flomo/",
+  "deploymentId": "dpl_AxhtvaXBbj6BEYo3TQkdtiz3fH42",
+  "codeCommit": "890651e",
+  "htmlSha256": "9fb62ea20d192753bdfa0568de739aa9a7f0c37643c2335cc6de1a374c49e70b",
+  "framework": "Express",
+  "aiProvider": "DeepSeek direct",
+  "aiModel": "deepseek-flash",
+  "publicBrowserChecks": 8,
+  "runtimeErrorLogsInPostDeployScan": 0,
+  "longTermMonitoring": "not_configured"
+}
