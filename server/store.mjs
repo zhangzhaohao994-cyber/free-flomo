@@ -1,3 +1,4 @@
+import {readFileSync} from 'node:fs';
 import { DatabaseSync } from 'node:sqlite';
 import { randomUUID, randomBytes, scrypt as scryptCallback, timingSafeEqual, createHash } from 'node:crypto';
 import { promisify } from 'node:util';
@@ -18,22 +19,13 @@ export function validNote(raw) {
 export class Store {
   constructor(path) {
     this.db = new DatabaseSync(path);
-    this.db.exec(`PRAGMA journal_mode=WAL; PRAGMA foreign_keys=ON;
-      CREATE TABLE IF NOT EXISTS users(id TEXT PRIMARY KEY,username TEXT NOT NULL UNIQUE,password TEXT NOT NULL,created_at TEXT NOT NULL);
-      CREATE TABLE IF NOT EXISTS tokens(hash TEXT PRIMARY KEY,user_id TEXT NOT NULL REFERENCES users(id),expires INTEGER NOT NULL,label TEXT NOT NULL);
-      CREATE TABLE IF NOT EXISTS notes(user_id TEXT NOT NULL REFERENCES users(id),id TEXT NOT NULL,payload TEXT,revision INTEGER NOT NULL DEFAULT 0,PRIMARY KEY(user_id,id));
-      CREATE TABLE IF NOT EXISTS revisions(seq INTEGER PRIMARY KEY AUTOINCREMENT,user_id TEXT NOT NULL,note_id TEXT NOT NULL,created_at TEXT NOT NULL);
-      CREATE TABLE IF NOT EXISTS prefs(user_id TEXT PRIMARY KEY REFERENCES users(id),payload TEXT NOT NULL);
-      CREATE TABLE IF NOT EXISTS wechat(openid TEXT PRIMARY KEY,user_id TEXT NOT NULL REFERENCES users(id));
-      CREATE TABLE IF NOT EXISTS bind_codes(code TEXT PRIMARY KEY,user_id TEXT NOT NULL REFERENCES users(id),expires INTEGER NOT NULL);
-      CREATE TABLE IF NOT EXISTS processed_messages(id TEXT PRIMARY KEY,created_at TEXT NOT NULL);
-      CREATE TABLE IF NOT EXISTS reminders(id TEXT PRIMARY KEY,user_id TEXT NOT NULL REFERENCES users(id),text TEXT NOT NULL,due_at TEXT NOT NULL,done INTEGER NOT NULL DEFAULT 0);
-      CREATE TABLE IF NOT EXISTS ai_memory(user_id TEXT PRIMARY KEY REFERENCES users(id),payload TEXT NOT NULL,created_at TEXT NOT NULL);`);
+    this.db.exec(readFileSync(new URL('./schema.sql',import.meta.url),'utf8'));
   }
   async register(username, password, allowRegistration = false) {
     if (typeof username!=='string'|| !/^[\p{L}\p{N}_@.\-]{3,60}$/u.test(username) || typeof password!=='string'||password.length<10||password.length>200) throw fail(400,'用户名 3–60 字；密码 10–200 字');
     if (!allowRegistration && this.db.prepare('SELECT count(*) n FROM users').get().n) throw fail(403,'此服务已关闭公开注册');
     const salt=randomBytes(16).toString('hex'), key=Buffer.from(await scrypt(password,salt,64)).toString('hex'), id=randomUUID();
+    if(!allowRegistration&&this.db.prepare('SELECT count(*) n FROM users').get().n)throw fail(403,'此服务已关闭公开注册');
     try{this.db.prepare('INSERT INTO users VALUES(?,?,?,?)').run(id,username,`${salt}:${key}`,new Date().toISOString())}catch{throw fail(409,'用户名已存在')}
     return this.session({id,username});
   }

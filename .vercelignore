@@ -1,0 +1,11 @@
+.git
+.tools
+.research
+.era
+.playwright-cli
+.data
+output
+node_modules
+.env*
+!.env.example
+scripts/*check.js

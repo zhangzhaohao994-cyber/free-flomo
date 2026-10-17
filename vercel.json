@@ -1,0 +1,9 @@
+{
+  "$schema":"https://openapi.vercel.sh/vercel.json",
+  "functions":{
+    "server.mjs":{
+      "includeFiles":"{index.html,sw.js,manifest.webmanifest,icon.svg,server/schema.sql}",
+      "maxDuration":300
+    }
+  }
+}
