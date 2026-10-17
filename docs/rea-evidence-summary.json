@@ -1,0 +1,66 @@
+{
+  "tool": {
+    "era": "0.2.0",
+    "era_commit": "a6056e20fb597fb7b8cceb23f19b761d27852a4e",
+    "rea": "6.4.0"
+  },
+  "analysis_id": "analysis-20261017T211536-c5040e",
+  "created_at": "2026-10-17T21:16:27.385Z",
+  "status": "succeeded",
+  "evidence_id": "ev_d10bdef1967d7a28e42657de9ce28a625d73c9736ff00beaae7b4543b6a63907",
+  "input_sha256": "400e16cc31eefc456deafacd7747db8601c3226c290f912f427875b90596085a",
+  "coverage": "partial",
+  "unknowns": 505,
+  "statistics": {
+    "relevant_files": 6,
+    "nested_asar_containers": 0,
+    "text_bytes_read": 6388059,
+    "invalid_utf8_files": 0,
+    "parsed_javascript_files": 4,
+    "visited_ast_nodes": 1345899,
+    "findings": 6354,
+    "modules": 1288,
+    "parse_failures": 0
+  },
+  "limitations": [
+    "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+    "Electron API identity follows proven lexical module aliases. Reassigned bindings, dynamic selections, and visibly overwritten namespace members are unresolved; missing findings do not establish absence. Arbitrary call side effects and runtime registration are not evaluated.",
+    "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+    "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+    "Resource constraint during analyze_javascript_application: Expanded application relationships for chunk-core.0c61610a.js exceed the parent's result budget; complete static facts were retained on the file node",
+    "Resource constraint during analyze_javascript_application: Expanded application relationships for index.7a2c18ea.js exceed the parent's result budget; complete static facts were retained on the file node",
+    "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+    "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+    "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code.",
+    "chunk-core.0c61610a.js: Resource constraint during analyze_javascript_application: chunk-core.0c61610a.js: Resource constraint during analyze_javascript_application: The parent reserved its remaining result capacity for static observations; semantic analysis of chunk-core.0c61610a.js was not started",
+    "chunk-editor.cbc49325.js: Resource constraint during analyze_javascript_application: Semantic graph for chunk-editor.cbc49325.js exceeds the parent's remaining result budget; static and module facts were retained",
+    "index.7a2c18ea.js: Resource constraint during analyze_javascript_application: index.7a2c18ea.js: Resource constraint during analyze_javascript_application: The parent reserved its remaining result capacity for static observations; semantic analysis of index.7a2c18ea.js was not started"
+  ],
+  "sources": [
+    {
+      "url": "https://resource.flomoapp.com/flomo-web/js/runtime.00775708.js",
+      "file": "runtime.00775708.js",
+      "bytes": 8720,
+      "sha256": "d1e5f443e6deb9a4063390dcd801f41f3ad103af61b257a101aa603359b541de"
+    },
+    {
+      "url": "https://resource.flomoapp.com/flomo-web/js/chunk-core.0c61610a.js",
+      "file": "chunk-core.0c61610a.js",
+      "bytes": 1840896,
+      "sha256": "479e64cc3274c5c729af317d12e7f16f40543bfa94d856ae8b9ae57eb04e1f2c"
+    },
+    {
+      "url": "https://resource.flomoapp.com/flomo-web/js/chunk-editor.cbc49325.js",
+      "file": "chunk-editor.cbc49325.js",
+      "bytes": 278387,
+      "sha256": "be1bceab6eab6519c105ce7d548b7585e675d51ec8ce6723722f80f4096e630f"
+    },
+    {
+      "url": "https://resource.flomoapp.com/flomo-web/js/index.7a2c18ea.js",
+      "file": "index.7a2c18ea.js",
+      "bytes": 4255413,
+      "sha256": "ec294b938e0094af1ad2dfd01f033eeb80f21a3bacae86f7aa854b39e13eef96"
+    }
+  ],
+  "scope": "Static analysis of public web assets only. No authenticated runtime, native app, server, paid feature unlock or original source recovery."
+}

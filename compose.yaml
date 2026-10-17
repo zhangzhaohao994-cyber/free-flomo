@@ -1,0 +1,13 @@
+services:
+  free-flomo:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:4188:4188"
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+    volumes:
+      - free-flomo-data:/app/.data
+volumes:
+  free-flomo-data:

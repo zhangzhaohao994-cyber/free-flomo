@@ -1,0 +1,21 @@
+{
+  "name": "free-flomo",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first card notes with an optional account, sync, AI and integration backend",
+  "engines": {
+    "node": ">=24.16.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/server.mjs",
+    "test": "node --test server/*.test.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "dependencies": {
+    "ai": "^7.0.143"
+  },
+  "devDependencies": {
+    "fflate": "^0.8.3"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id":"./",
+  "name":"免费浮墨 · Free Flomo",
+  "short_name":"免费浮墨",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#f7f9f8",
+  "theme_color":"#278b69",
+  "icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

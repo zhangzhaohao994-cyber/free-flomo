@@ -1,0 +1,9 @@
+.git
+.tools
+.research
+.era
+node_modules
+.data
+.env
+output
+.playwright-cli
