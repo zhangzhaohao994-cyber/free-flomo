@@ -19,3 +19,14 @@
 - Transformers.js采用Apache-2.0，Whisper及ONNX Runtime采用MIT，许可证保留在 `public/speech/v1/licenses/`。本项目MIT不替代第三方许可证。
 
 设备内转写不产生按次推理费，下载会占用网络流量和设备资源；静态托管仍受免费平台的带宽、容量及服务条款限制，不承诺无限公网用量。
+
+## 测试音频
+
+浏览器验收脚本使用macOS Tingting合成音源，不包含用户录音。可在macOS准备忽略目录中的测试文件，然后运行`scripts/speech-browser-check.js`、`scripts/speech-recorder-check.js`或`scripts/speech-public-check.js`。测试会使用独立浏览器空间，后端脚本默认QA端口4194。
+
+```bash
+mkdir -p .data
+say -v Tingting -o .data/speech-qa.aiff '今天是一个新的开始。我想记录三个重要的想法。第一个是坚持阅读，第二个是每天运动，第三个是早点休息。'
+afconvert -f WAVE -d LEI16@16000 -c 1 .data/speech-qa.aiff .data/speech-qa.wav
+afconvert -f m4af -d aac -b 64000 .data/speech-qa.aiff .data/speech-qa.m4a
+```

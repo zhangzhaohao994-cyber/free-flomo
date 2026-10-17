@@ -3,13 +3,24 @@
   "target": "production",
   "url": "https://free-flomo-chongchujianghu-s-projects.vercel.app/",
   "githubPages": "https://zhangzhaohao994-cyber.github.io/free-flomo/",
-  "deploymentId": "dpl_AxhtvaXBbj6BEYo3TQkdtiz3fH42",
-  "codeCommit": "890651e",
-  "htmlSha256": "9fb62ea20d192753bdfa0568de739aa9a7f0c37643c2335cc6de1a374c49e70b",
+  "deploymentId": "dpl_9jfRfVok2WHNo19uaxUNQvQUqtEp",
+  "codeCommit": "409b4af",
+  "htmlSha256": "d7ca3a5bfefbaa71e231c0bae4ad96eab99bc4e5c6dbe6fb2d2ddfef2aae4280",
   "framework": "Express",
   "aiProvider": "DeepSeek direct",
   "aiModel": "deepseek-flash",
   "publicBrowserChecks": 8,
   "runtimeErrorLogsInPostDeployScan": 0,
-  "longTermMonitoring": "not_configured"
+  "longTermMonitoring": "not_configured",
+  "localSpeech": {
+    "model": "Whisper tiny q8",
+    "inference": "browser WASM single thread",
+    "noAccountRequired": true,
+    "assetsBytes": 67762327,
+    "browserChecks": 20,
+    "physicalIphoneVerified": false,
+    "publicBrowserChecks": 10,
+    "originalDownloadByteIdentical": true,
+    "publicModelsSameOrigin": true
+  }
 }
