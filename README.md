@@ -6,7 +6,7 @@
 
 ## 直接使用
 
-- 在线：[GitHub Pages](https://zhangzhaohao994-cyber.github.io/free-flomo/)
+- 在线：[免费浮墨](https://free-flomo-chongchujianghu-s-projects.vercel.app/)（笔记与同步）；[GitHub Pages](https://zhangzhaohao994-cyber.github.io/free-flomo/)（独立前端）
 - 下载本仓库的 `index.html`，用现代浏览器打开。前端无 CDN、字体或框架依赖；ZIP库已内嵌。联网部署同时提供 sw.js 后支持离线重开。
 - 默认空白空间；点「先看看示例笔记」可添加 5 条明确标记的原创示例。
 - 本地数据按网址、浏览器和设备隔离。清理浏览器前导出 JSON；换网址也需要导入迁移。
@@ -33,7 +33,7 @@ npm start
 
 ## AI、语音、微信与 MCP
 
-- AI：服务端配置 `AI_GATEWAY_API_KEY`、`AI_MODEL`；语义相关笔记另需 `EMBEDDING_MODEL`。模型 ID 从你的服务当前模型列表选择，不内置过时型号。AI SDK 7 工具循环可搜索当前用户笔记，提出新笔记/提醒，写入由前端明确确认。
+- AI：可直接使用 DeepSeek，服务端配置 `DEEPSEEK_API_KEY`，`DEEPSEEK_MODEL` 默认 `deepseek-flash`（2026-10-18 核对[官方说明](https://api-docs.deepseek.com/)）；无需经过 AI Gateway。也可配置 `AI_GATEWAY_API_KEY`、`AI_MODEL`。语义向量另需 Gateway 与 `EMBEDDING_MODEL`，DeepSeek 对话接口不提供此能力。AI SDK 7 工具循环可搜索当前用户笔记，提出新笔记/提醒，写入由前端明确确认。
 - 语音：浏览器真实录音，原录音可下载；服务端配置兼容 multipart 转写接口的 `SPEECH_API_URL`、`SPEECH_API_KEY`、`SPEECH_MODEL`。未配置不会转写，也不会模拟输出。真实麦克风及实际转写质量尚未验证。
 - 微信：使用你有权限配置的专用服务号，将回调设为 `https://你的后端/integrations/wechat`，配置 `WECHAT_*`。生成绑定码后在服务号发送「绑定 绑定码」。支持文字、图片，以及 `/搜索 关键词`、`/回顾`、`/解绑`。不支持把本工具伪装成 flomo 官方服务号。未做真实公众号验收，不要直接替换已有账号正在使用的回调。
 - API：`POST /api/notes`，`Authorization: Bearer <专用令牌>`，请求 `{"text":"一个想法 #标签"}`。
@@ -44,7 +44,13 @@ npm start
 
 ## 部署
 
-GitHub Pages 只运行前端，不运行 Node 后端。后端使用带持久磁盘的 Node/Docker 主机；当前未部署公网后端。
+GitHub Pages 只运行前端，不运行 Node 后端。当前云端使用 Vercel Express + Turso 持久数据库，Turso Starter 免费方案；数据库环境变量由 Marketplace 安装提供。正式账号已预先建立，后续公开注册关闭。前端不会自动上传笔记，需要在「账号与同步」登录。云端免费额度和容量以平台为准，不承诺无限云存储。
+
+自行部署到 Vercel 时，先配置 `TURSO_DATABASE_URL`、`TURSO_AUTH_TOKEN`，通过管理脚本建立首个账号，再开放正式域名。运行环境若有 `VERCEL` 而没有数据库配置会拒绝初始化，避免把账号与笔记写入临时磁盘。大图片同步使用持久分片跨函数调用组装，成功下载后清理临时分片；单次同步最多50MB，仍是全量同步，大库需要继续优化。
+
+建立首个账号可运行 `npm run create-owner`（读取 `.env`）；Marketplace 已拉取到 `.env.local` 时使用 `node --env-file=.env.local scripts/bootstrap-owner.mjs`。脚本仅在账号表为空时运行，随机密码写入本机忽略目录 `.data/first-owner.txt`，文件权限为0600，不打印密码。账号已存在时拒绝执行。
+
+也可在带持久磁盘的 Node/Docker 主机运行：
 
 ```bash
 docker compose up -d --build

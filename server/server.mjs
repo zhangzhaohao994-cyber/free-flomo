@@ -1,6 +1,6 @@
 import {changePassword} from './account.mjs';
 import {Readable} from 'node:stream';
-import {createTransfer,writePart,readPart,outgoing,incoming,removeTransfer} from './transfers.mjs';
+import {createTransfer,writePart,readPart,outgoing,incoming,removeTransfer,findTransfer} from './transfers.mjs';
 import http from 'node:http';
 import { readFile, mkdir } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
@@ -14,7 +14,7 @@ const str=(v,max=100000)=>typeof v==='string'&&v.length<=max;
 export async function createApp(options={}){
  const env=options.env||process.env,dataDir=options.dataDir||resolve(root,'.data');
  let store=options.store;if(!store){if(env.TURSO_DATABASE_URL){const{RemoteStore}=await import('./remote-store.mjs');store=await RemoteStore.create({url:env.TURSO_DATABASE_URL,authToken:env.TURSO_AUTH_TOKEN})}else{if(env.VERCEL)throw new Error('公网数据库未配置，拒绝使用临时文件系统');await mkdir(dataDir,{recursive:true});store=new Store(resolve(dataDir,'notes.sqlite'))}}
- const intelligence=new Intelligence(store,{apiKey:env.AI_GATEWAY_API_KEY,model:env.AI_MODEL,embeddingModel:env.EMBEDDING_MODEL,speechUrl:env.SPEECH_API_URL,speechKey:env.SPEECH_API_KEY,wechatToken:env.WECHAT_TOKEN});
+ const intelligence=new Intelligence(store,{deepseekKey:env.DEEPSEEK_API_KEY,deepseekModel:env.DEEPSEEK_MODEL||'deepseek-flash',apiKey:env.AI_GATEWAY_API_KEY,model:env.AI_MODEL,embeddingModel:env.EMBEDDING_MODEL,speechUrl:env.SPEECH_API_URL,speechKey:env.SPEECH_API_KEY,wechatToken:env.WECHAT_TOKEN});
  const origins=new Set((env.ALLOWED_ORIGINS||'http://127.0.0.1:4187,http://localhost:4187,http://127.0.0.1:4188,http://localhost:4188,https://zhangzhaohao994-cyber.github.io').split(',').map(s=>s.trim()));
  const attempts=new Map();const bodyLimit=50*1024*1024;
  function rate(req,key,max=10){const now=Date.now(),id=(req.socket.remoteAddress||'unknown')+':'+key,old=attempts.get(id);if(!old||old.until<now){attempts.set(id,{n:1,until:now+60000});return}if(++old.n>max)throw fail(429,'请求过于频繁，请稍后再试');if(attempts.size>10000)for(const[k,v]of attempts)if(v.until<now)attempts.delete(k)}
@@ -47,9 +47,9 @@ export async function createApp(options={}){
    if(path==='/api/auth/register'&&req.method==='POST'){rate(req,'auth',8);const b=await body(req);await send(201,await store.register(b.username,b.password,env.ALLOW_REGISTRATION==='true'));return}
    if(path==='/api/auth/login'&&req.method==='POST'){rate(req,'auth',8);const b=await body(req);await send(200,await store.login(b.username,b.password));return}
    if(path.startsWith('/api/')||path==='/mcp'){
-    const token=(req.headers.authorization||'').replace(/^Bearer /i,''),user=await store.auth(token);responseUser=user.id;rate(req,'api',240);
+    const token=(req.headers.authorization||'').replace(/^Bearer /i,''),user=await store.auth(token);responseUser=user.id;rate(req,path.startsWith('/api/transfers')?'transfer':'api',path.startsWith('/api/transfers')?1200:240);
     if(path==='/api/transfers'&&req.method==='POST'){const b=await body(req);if(!['/api/sync','/api/transcribe'].includes(b.route)||b.method!=='POST')throw fail(400,'不支持此传输目标');const id=await createTransfer(store,user.id,{...b,direction:'upload'});await send(201,{id});return}
-    if(path.startsWith('/api/transfers/')){const seg=path.split('/'),id=seg[3];if(seg[4]==='commit'&&req.method==='POST'){const{text,transfer}=await incoming(store,user.id,id);const internal=Readable.from([Buffer.from(text)]);internal.url=transfer.route;internal.method=transfer.method;internal.headers={authorization:req.headers.authorization,'content-type':'application/json'};internal.socket=req.socket;await handler(internal,res);await removeTransfer(store,id);return}const index=Number(seg[4]);if(req.method==='PUT'){const b=await body(req);await writePart(store,user.id,id,index,b.data);await send(200,{ok:true});return}if(req.method==='GET'){await send(200,{data:await readPart(store,user.id,id,index)});return}throw fail(405,'不支持的传输方法')}
+    if(path.startsWith('/api/transfers/')){const seg=path.split('/'),id=seg[3];if(req.method==='DELETE'&&seg.length===4){await findTransfer(store,user.id,id);await removeTransfer(store,id);await send(200,{ok:true});return}if(seg[4]==='commit'&&req.method==='POST'){const{text,transfer}=await incoming(store,user.id,id);const internal=Readable.from([Buffer.from(text)]);internal.url=transfer.route;internal.method=transfer.method;internal.headers={authorization:req.headers.authorization,'content-type':'application/json'};internal.socket=req.socket;await handler(internal,res);await removeTransfer(store,id);return}const index=Number(seg[4]);if(req.method==='PUT'){const b=await body(req);await writePart(store,user.id,id,index,b.data);await send(200,{ok:true});return}if(req.method==='GET'){await send(200,{data:await readPart(store,user.id,id,index)});return}throw fail(405,'不支持的传输方法')}
     if(path==='/api/auth/password'&&req.method==='POST'){rate(req,'password',5);const b=await body(req);await send(200,await changePassword(store,user.id,b.current,b.next,token));return}
     if(path==='/api/auth/logout'&&req.method==='POST'){await store.logout(token);await send(200,{ok:true});return}
     if(path==='/api/me'&&req.method==='GET'){await send(200,{user,...intelligence.status()});return}

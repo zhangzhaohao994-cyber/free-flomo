@@ -1,5 +1,5 @@
 'use strict';
-const CACHE='free-flomo-shell-v2';
+const CACHE='free-flomo-shell-v3';
 const SHELL=new URL('./index.html',self.location).href;
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.add(new Request(SHELL,{cache:'reload'}))).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('free-flomo-shell-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
