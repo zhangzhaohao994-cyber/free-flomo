@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-18",
+  "method": "Web 搜索与原页阅读；App Store 使用 curl 读取公开发行页面；只存摘要与元数据",
+  "queries": [
+    {
+      "query": "flomo 盈利 用户 融资 2025 2026",
+      "result": "先发现历史与当前材料；不采用自动生成故事"
+    },
+    {
+      "query": "site:help.flomoapp.com 关于我们 少楠 Lightory",
+      "result": "找到起源、年度信与经营理念"
+    },
+    {
+      "query": "flomo PRO 价格 2026 会员 Agent",
+      "result": "确认有 MAX 与扩展额度，再查发行平台原页"
+    },
+    {
+      "query": "flomo 招聘 AI 产品经理 2026",
+      "result": "识别近期职业动态及同名文具企业噪声"
+    },
+    {
+      "query": "Lightory 刘白光 个人 博客",
+      "result": "找到官方指向的 Notion、署名文章、节目页"
+    },
+    {
+      "query": "刘少楠 丁香园 百姓网 食色 经历",
+      "result": "与本人博客交叉；剥离早年融资"
+    },
+    {
+      "query": "flomo 幕布 收购 2023 2022 官方",
+      "result": "区分 2023 意向报道与后来经营确认"
+    },
+    {
+      "query": "flomo 上海仙蒂 股东",
+      "result": "识别数据库与招聘页面法定代表人冲突"
+    },
+    {
+      "query": "site:gsxt.gov.cn 上海仙蒂网络科技有限公司",
+      "result": "未取得目标公司的官方登记档案，不能给无异常结论"
+    },
+    {
+      "query": "site:biji.com Get笔记 官方 AI 笔记",
+      "result": "确认得到大脑新名称与官方文档"
+    },
+    {
+      "query": "site:eze.is 帮少楠",
+      "result": "读取 AI 产品经理招聘转发，但未取得正式 JD 全文"
+    }
+  ],
+  "not_done": [
+    "全网穷尽",
+    "付费内容获取",
+    "全音频听校",
+    "员工及银行访谈",
+    "登录产品实测",
+    "官方登记档案",
+    "司法与监管穿透",
+    "财务审计"
+  ]
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "name": "少楠 / 刘少楠 / Plidezus",
+    "role": "联合创始人",
+    "sources": [
+      "S12",
+      "S18",
+      "S24"
+    ],
+    "unknown": "现行完整职务、劳动履历证明"
+  },
+  {
+    "name": "Lightory / Light / 白光 / 刘白光",
+    "role": "联合创始人",
+    "sources": [
+      "S11",
+      "S12",
+      "S30"
+    ],
+    "unknown": "当前正式职级、完整学历与任职核验"
+  },
+  {
+    "name": "呵呵 / HH",
+    "role": "历史 iOS 开发参与者",
+    "sources": [
+      "S13",
+      "S52"
+    ],
+    "unknown": "2026 是否在职"
+  },
+  {
+    "name": "DK",
+    "role": "历史 Android 开发参与者",
+    "sources": [
+      "S13",
+      "S52"
+    ],
+    "unknown": "2026 是否在职、实名"
+  },
+  {
+    "name": "fonter",
+    "role": "内容项目合作者",
+    "sources": [
+      "S18"
+    ],
+    "unknown": "flomo 雇佣关系"
+  },
+  {
+    "name": "一泽 Eze",
+    "role": "公开招聘转发与职业联系",
+    "sources": [
+      "S37"
+    ],
+    "unknown": "雇佣、管理或股权关系；不予推定"
+  },
+  {
+    "name": "刘飞",
+    "role": "访谈主持与内容关系",
+    "sources": [
+      "S22"
+    ],
+    "unknown": "不据此推定团队关系"
+  }
+]

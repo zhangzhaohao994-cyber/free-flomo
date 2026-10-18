@@ -1,0 +1,55 @@
+id,title,url,kind,published,checked,access,note
+S01,flomo 官网,https://flomoapp.com/,官方产品,未标注,2026-10-18,正文已读,定位、跨平台、订阅与功能边界；营销表述不等于效果验证。
+S02,flomo 101 首页,https://help.flomoapp.com/,官方产品,动态页面,2026-10-18,正文已读,2020-04-18 上线；上百万用户为官方规模表述，未定义活跃或付费口径。
+S03,会员介绍：PRO / MAX,https://help.flomoapp.com/membership/pro.html,官方产品,动态页面,2026-10-18,正文已读,现行权益和升级规则；最终成交价格以购买页为准。
+S04,flomo Agent,https://help.flomoapp.com/ai/agent.html,官方产品,动态页面,2026-10-18,正文已读,MAX 对话、回顾、提醒、写回；565 位内测用户是该功能的样本。
+S05,Agent 点数与扩展包,https://help.flomoapp.com/ai/agent-points.html,官方产品,含 2026-08-18 调整说明,2026-10-18,正文已读,每日额度、扩展包、有效期与高峰消耗规则；上游涨价是官方解释。
+S06,AI 记忆档案,https://help.flomoapp.com/ai/memory.html,官方产品,动态页面,2026-10-18,正文已读,至少 30 条笔记；手动重生成；画像与记忆文档；非自动持续更新。
+S07,AI 洞察,https://help.flomoapp.com/ai/insight.html,官方产品,动态页面,2026-10-18,正文已读,支持单条与多条笔记、来源引用；产品说明不是准确率评测。
+S08,存储与导出,https://help.flomoapp.com/basic/storage.html,官方产品,动态页面,2026-10-18,正文已读,免费 500M、PRO 20G、MAX 500G；导出 HTML；到期附件规则。
+S09,隐私政策,https://help.flomoapp.com/privacy.html,官方协议,2026-07-29,2026-10-18,正文已读,运营主体、Agent 数据处理与服务商范围；未进行隐私或安全审计。
+S10,flomo 的经营理念,https://help.flomoapp.com/about-us/about-us/company-concept.html,创始人原文,2021-08-11,2026-10-18,正文已读,当时零融资、自负盈亏及七年维护储备承诺；历史自述，非最新财报。
+S11,flomo 的开发理念,https://help.flomoapp.com/about-us/about-us/development-concept.html,创始人原文,2021-04-16,2026-10-18,正文已读,Lightory 谈 Web 起步、输入 API、聚焦核心与工程师业务责任。
+S12,flomo 的源起,https://help.flomoapp.com/about-us/flomo-origin.html,创始人原文,早期文章，未标注日期,2026-10-18,正文已读,两位创始人、个人想法记录的起点；旧功能边界需与新文档区分。
+S13,flomo 的 2021,https://help.flomoapp.com/about-us/annual-letter-2021.html,官方年度信,2022-02-10,2026-10-18,正文已读,2021 年两位创始人转全职、呵呵 / DK 兼职客户端开发；筹备小报童。
+S14,flomo 的 2022,https://help.flomoapp.com/about-us/annual-letter-2022.html,官方年度信,2023-02-09,2026-10-18,正文已读,核心指标增长 103% 未说明指标定义；不能写成营收增长。
+S15,flomo 的 2023,https://help.flomoapp.com/about-us/annual-letter-2023.html,官方年度信,2024-02-19,2026-10-18,正文已读,全平台离线、产品聚焦、《笔记的方法》；6000 多位创始读者非会员数。
+S16,flomo 的 2024,https://help.flomoapp.com/about-us/annual-letter-2024.html,官方年度信,2025-02-06,2026-10-18,正文已读,相关笔记、语义检索和随机漫步；以用户价值衡量 AI。
+S17,flomo 的 2025,https://help.flomoapp.com/about-us/annual-letter-2025.html,官方年度信,页面标注 2026-05-08,2026-10-18,正文已读,AI 洞察、技术优化与新人加入；页面的周年相对时间有不一致，不作精确时间证据。
+S18,少楠：关于我,https://shaonan.blog/about/,本人公开履历,动态页面,2026-10-18,正文已读,职业与项目年表；只摘要职业相关部分，不收集家庭资料。
+S19,一个产品人的妄念与懦弱：专访刘少楠,https://www.uisdc.com/flomo-liushaonan,公开访谈,约 2022 年；需看原页精确日期,2026-10-18,搜索长摘要；直连失败,2014 年前后食色融资故事；不是 flomo 融资，不当作听校后的逐字口述。
+S20,AI 让生产效率不再是瓶颈，然后呢？,https://www.sohu.com/a/1022656836_455313,公开访谈,2026-05-14,2026-10-18,正文已读,腾讯研究院署名访谈所在搜狐页面；16 人团队、先 Demo 后 PRD、协作重构，均为受访者口径。
+S21,世界上没有一款产品仅靠 AI 就突然变得独特了,https://elsewhere.news/zh/ainow/ai-flomo,公开访谈,2026 年初；页面日期需复核,2026-10-18,搜索长摘要,AI 闹访谈转载；用于定位原访谈议题，不把片段当完整原音。
+S22,三五环 No.118：少楠与 light,https://www.xiaoyuzhoufm.com/episode/64a535dbf4ccb12e0b1e2d16,播客节目页,2023-07，页面评论可辅助定位,2026-10-18,节目说明已读；未听完整音频,嘉宾身份、内容与品牌主题和节目方时间轴；刘飞是主持人，不是联合创始人。
+S23,深入聊聊：Super黄对话 Light,https://www.xiaoyuzhoufm.com/episode/624b7c41bfd2579bb2384e9f,播客节目页,2022-04,2026-10-18,节目说明已读；未听完整音频,长期主义、双核创业和工程经营视角；按节目方索引选听。
+S24,Buidler Talk E14：少楠,https://www.xiaoyuzhoufm.com/episode/60098bf729de8062086ffad5,播客节目页,2021-01,2026-10-18,节目说明已读；未听完整音频,前百姓网 / 丁香医生经历与产品思考；早期信息。
+S25,Lightory：My 2023,https://www.huxiu.com/article/2609136.html,本人署名转载,2024-01-29,2026-10-18,搜索长摘要；直连失败,对早期创业、资源、规模化收入和决策节奏的反思。
+S26,Lightory：写在 34 岁,https://www.huxiu.com/article/3295667.html,本人署名转载,2024-07-28,2026-10-18,搜索长摘要；直连失败,持续收益和持续成本、决策节奏；不能推断个人资产。
+S27,Lightory：君子不器,https://www.huxiu.com/article/4833469.html,本人署名转载,此页 2026-02-08，另有 2025 版本,2026-10-18,正文已读,跨职能与主体性；重复转载不计作两条独立证据。
+S28,36氪：将全资收购幕布,https://www.36kr.com/p/2163146749079812,媒体报道,2023-03-15,2026-10-18,正文已读,当时的收购公告语境；幕布用户不能并入 flomo 用户，未披露交易价格。
+S29,界面：flomo 拟向飞书收购幕布,https://www.jiemian.com/article/9073189.html,媒体报道,2023-03-15,2026-10-18,正文已读,报道的是初步合作意向；完成状态再与后续创始人自述交叉核对。
+S30,36氪创投平台：浮墨笔记 flomo,https://pitchhub.36kr.com/project/2173518949973505,商业数据库,字段未标注有效日期,2026-10-18,正文已读,股东 55% / 45% 与法定代表人仅作数据库线索，未取得工商最新档案。
+S31,BOSS直聘：上海仙蒂网络科技,https://m.zhipin.com/companys/866e83fb37b684d71nx62tq1.html,招聘平台,页面标注 2026-06-25 更新,2026-10-18,搜索长摘要,公司品牌与 0-20 人区间；法定代表人字段与 36氪冲突；不是工商认证。
+S32,小报童官网,https://xiaobot.net/,关联产品官方,动态页面,2026-10-18,官网入口已读取；静态正文有限,付费专栏规则以 S33 官方协议为主；与 flomo 业务边界分开。
+S33,小报童创作者合作协议,https://help.xiaobot.net/creator-legal.html,关联产品官方协议,2025-09-16；09-30 生效,2026-10-18,正文已读,杭州浮墨主体；平台服务费 15%；退款、合伙人和创作者责任。
+S34,幕布官网,https://mubu.com/,关联产品官方,动态页面,2026-10-18,curl 获取并提取正文,大纲笔记与思维导图；页脚展示深圳市十里湖科技有限公司，未完成股权穿透。
+S35,幕布：加入我们,https://mubu.com/jobs,关联产品官方招聘,未标注发布日期,2026-10-18,正文已读,工程与运营职责样本；公开存在不代表仍有招聘名额。
+S36,羔羊计划,https://sheeppress.com/,关联产品官方,动态页面,2026-10-18,正文已读,官网列年龄、问题、解题专题及待建状态；未确认成熟付费业务或营收。
+S37,一泽：flomo AI 产品经理招聘转发,https://eze.is/thoughts,公开职业动态,页面列表 2026-10-16,2026-10-18,正文已读,近期招聘线索及共享办公表述；不能推定 Eze 为员工或核心管理者。
+S38,中国区 App Store：flomo,https://apps.apple.com/cn/app/id1552314395,官方发行页面,2026-10-18 读取；版本页列 09-24,2026-10-18,curl 获取并提取正文,读取内购价、评级与提供者；宣传简介、内购权益文字与帮助中心存在更新差异。
+S39,Cubox 官网,https://cubox.pro/,竞品官方,动态页面,2026-10-18,正文已读,AI 稍后阅读、收藏、标注与资料再利用；不声称已做实际体验测试。
+S40,Obsidian 定价与数据说明,https://obsidian.md/pricing,竞品官方,动态页面,2026-10-18,正文已读,核心应用免费、本地存储，可选 Sync / Publish 付费；避免旧的商用必付费说法。
+S41,Notion 产品官网,https://www.notion.com/product,竞品官方,动态页面,2026-10-18,正文已读,团队上下文、文档与 Agent 的一体化工作空间。
+S42,得到大脑（原 Get 笔记）官方文档,https://doc.biji.com/,竞品官方,动态页面,2026-10-18,正文已读,原品牌已升级；多模态输入、记忆、知识库和成果创作。
+S43,Get 笔记开发者文档,https://www.biji.com/docs/getnote/developer/index,竞品官方,动态页面,2026-10-18,正文已读,搜索与召回 API，公测可变；不把免审公测当永久免费。
+S44,Memos 官方开源仓库,https://github.com/usememos/memos,竞品官方,动态页面,2026-10-18,正文已读,开源、自托管、时间线短记；不是已核实商业公司的财务对标。
+S45,mymind 官网,https://mymind.com/,竞品官方,动态页面,2026-10-18,正文已读,私人收藏和笔记、自动组织与关联搜索。
+S46,Voicenotes 官网,https://voicenotes.com/,竞品官方,动态页面,2026-10-18,正文已读,当前主页偏向会议记录及问答；不要仅沿用早期个人语音便签描述。
+S47,Effie 官网,https://www.effie.co/,竞品官方,动态页面,2026-10-18,正文已读,写作、大纲、思维导图及 AI 助手。
+S48,Tana 官网,https://tana.inc/,竞品官方,动态页面,2026-10-18,正文已读,当前页面侧重会议捕捉与后续工作；不照搬旧定位。
+S49,Lightory 个人主页入口,https://lightory.notion.site/,本人公开入口,未核验,2026-10-18,入口已确认；正文不可读,由 flomo 官方署名链接确认归属；不据此补全履历。
+S50,2013 年火花 API 分享活动,https://www.v2ex.com/t/92397,历史活动公告,2013-12-09,2026-10-18,正文已读,活动主办方称刘白光为火花 TV 技术负责人；不是当前任职。
+S51,食亨技术招聘：lightory 发帖,https://learnku.com/laravel/t/44454?order_by=vote_count,历史职业动态,约 2020 年；精确日期未核验,2026-10-18,正文已读,提供其与食亨工程招聘的公开联系；不足以证明任职起止或职位级别。
+S52,flomo 英文 About Us,https://help.flomo.app/about-us,官方历史页面,页面曾显示多年前更新,2026-10-18,正文已读,列 Plidezus / Lightory；HH iOS、DK Android，均按历史参与者处理。
+S53,flomo 特别鸣谢,https://help.flomoapp.com/about-us/credit.html,官方产品,动态页面,2026-10-18,正文已读,鸣谢是贡献关系，不能把全部受谢者当员工。
+S54,国家企业信用信息公示系统,https://www.gsxt.gov.cn/,官方核验入口,动态入口,2026-10-18,未取得该企业登记档案,用于下一轮核验清单；不把入口存在写成已核查无异常。

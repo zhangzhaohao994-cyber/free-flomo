@@ -1,0 +1,36 @@
+{
+  "source_id": "S38",
+  "url": "https://apps.apple.com/cn/app/id1552314395",
+  "retrieved_on": "2026-10-18",
+  "method": "curl + BeautifulSoup public page text extraction",
+  "original_response_sha256": "c661da80aa3fa51fd8996290b87805d5ac1ea73b156b928aa0d7fe4adfd4c454",
+  "original_response_bytes": 760424,
+  "provider": "上海仙蒂网络科技有限公司",
+  "company_identifier": "91310115MA1H7AKK0U",
+  "rating": "4.9",
+  "rating_count_display": "5.3万",
+  "prices_cny": {
+    "pro_month": 15,
+    "pro_year": 99,
+    "max_month": 39,
+    "max_year": 299,
+    "max_year_education": 249,
+    "agent_3000": 9,
+    "agent_10000": 29,
+    "agent_30000": 79
+  },
+  "scope": "中国区 iOS 发行页展示，不是实际成交；原始完整评论与全文不转载",
+  "observed_text_checks": {
+    "¥15.00": true,
+    "¥99.00": true,
+    "¥299.00": true,
+    "¥39.00": true,
+    "¥249.00": true,
+    "¥9.00": true,
+    "¥29.00": true,
+    "¥79.00": true,
+    "91310115MA1H7AKK0U": true,
+    "5.3万": true,
+    "4.9": true
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "research_date": "2026-10-18",
+  "source_count": 54,
+  "chapter_count": 12,
+  "files": [
+    {
+      "path": "00_阅读指南/00_研究结论与边界.md",
+      "bytes": 4018,
+      "sha256": "8629e9ec77f2744816fe08d9464a4364da88205790b859197c7e0e982d492ef8"
+    },
+    {
+      "path": "01_公司与项目/01_公司主体与项目地图.md",
+      "bytes": 4845,
+      "sha256": "92b6b1b6bb4bfa7b35c058b7f7263ddba1be55e5ed9a4ad51d3bcc24224b643b"
+    },
+    {
+      "path": "01_公司与项目/02_产品机制与演化.md",
+      "bytes": 5122,
+      "sha256": "a6158b24aa962e96cac695c97d211a8c6a5427c5996f056fe9148f9e8864a781"
+    },
+    {
+      "path": "02_竞争与风险/01_竞品与公司对标.md",
+      "bytes": 4922,
+      "sha256": "ba9d0aeca671c0558ab082c7cde3d5063c21aea083946cfcbb5bc7c1a2539f44"
+    },
+    {
+      "path": "02_竞争与风险/02_SWOT与风险台账.md",
+      "bytes": 5710,
+      "sha256": "1b6de1dda651cb4b0ccd90a3d585c0ccdc27f574f454cd1306a5651af709c90c"
+    },
+    {
+      "path": "03_商业与财务/01_变现融资用户与盈利.md",
+      "bytes": 6115,
+      "sha256": "c147764ca290a54e5a72212a5088c83a37853d2a6a3a6b2dd97b368bf13c0f0d"
+    },
+    {
+      "path": "04_人物与公开关系/01_创始人与团队档案.md",
+      "bytes": 8157,
+      "sha256": "babbe07d92109a36c3601ed07a93ceb7cfcbe9f035b1c843b8e6863854d07625"
+    },
+    {
+      "path": "05_原文与访谈索引/01_选读选听与观点演化.md",
+      "bytes": 4704,
+      "sha256": "485b9b8fdb32a61e60d0c4b193f345cdb8964c46a5b73958f6d7741561a2197a"
+    },
+    {
+      "path": "06_面试准备/01_创始人面谈提纲.md",
+      "bytes": 8263,
+      "sha256": "4f61afc32893dd5b8b6ec8fd1486e1cb311484278c962ad7dc7c3a0633f94f7f"
+    },
+    {
+      "path": "06_面试准备/02_可展示案例与入职假设.md",
+      "bytes": 2468,
+      "sha256": "dceaf5d092885dc538e22498b6d3187ee266c5c06e021ebafb9a8b041d8be915"
+    },
+    {
+      "path": "07_尽调入门与待核验/01_尽调解释与核验清单.md",
+      "bytes": 6684,
+      "sha256": "6e27b2dd887ad2ce269ff9c7c7df9bbb81af74b73414606ffba9f67779ef1919"
+    },
+    {
+      "path": "07_尽调入门与待核验/02_冲突与排除记录.md",
+      "bytes": 4452,
+      "sha256": "09702bf2243d0896a833ca7f3bec5b1f4bd96c9a23a05829ec130fc409bf868f"
+    },
+    {
+      "path": "08_来源与数据/sources.csv",
+      "bytes": 11660,
+      "sha256": "2bb283e217419eecd2d9cb5739aa1be9721ad0e59252a9e4d2fb7e25947ad5de"
+    },
+    {
+      "path": "08_来源与数据/sources.json",
+      "bytes": 18904,
+      "sha256": "7100e41e3efd68a2e0ce94ea3dad7ec2a6ca9a0609b16feeba1d9992f8925624"
+    },
+    {
+      "path": "08_来源与数据/人物与关系.json",
+      "bytes": 1234,
+      "sha256": "00ec6b97f2202aaba9863a7d9c89992a829bc0fceca2fb81dd4a8d2e08d45038"
+    },
+    {
+      "path": "08_来源与数据/关键主张核验表.csv",
+      "bytes": 1264,
+      "sha256": "fa7401bee80b19802554a4977bb4fef4a44441e1d6c7011579c6cc23029e778a"
+    },
+    {
+      "path": "08_来源与数据/官方发行页证据摘要.json",
+      "bytes": 1043,
+      "sha256": "38672e662a6c013413a6e1b32a1e023223a2c8373413e9ee8340e576dc0744ff"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S01.md",
+      "bytes": 427,
+      "sha256": "7ab71af784074ccdda2e94f89530cc5bffb333594c501d19cb4428391911d526"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S02.md",
+      "bytes": 450,
+      "sha256": "97d567506ad62b73df643dbba8680f39cc29ab3aca96984c01f58ba0fbbcf391"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S03.md",
+      "bytes": 454,
+      "sha256": "05bd871b0d60ea40e52011e320f677403d30e62ea0eb9d31738d4adb36e10f76"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S04.md",
+      "bytes": 449,
+      "sha256": "13f0c4e8f2e763836a3013c0431a13395c6ea6cc08909f8302d4bd3f2e2cb8ee"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S05.md",
+      "bytes": 491,
+      "sha256": "e2d03e58305c9db57f0816560fbef3ed6c94f1255628e22ffd24e096dae2aca3"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S06.md",
+      "bytes": 459,
+      "sha256": "6ae52c59356b08a5375bbd0da65eda9f0ef13ab3f69dd508580278901c67e7e6"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S07.md",
+      "bytes": 447,
+      "sha256": "9f1fdbbf481b80904d6049f3bb6b2a0406e31d7fae5d3836edc5866f33523e1b"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S08.md",
+      "bytes": 445,
+      "sha256": "44cb0e16d1944ba8ab2b33ef2c18d37388c3f2d149e17e63ba5499242e0f3b3c"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S09.md",
+      "bytes": 451,
+      "sha256": "7d6061c37bc22959d2ff080a0978af7cae63d1a5ab42ebcd4bee053280787e53"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S10.md",
+      "bytes": 495,
+      "sha256": "f6956d07869b5478f5013b02e0cd441cc03ba63911d3b4e1a2c0162a94f42da6"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S11.md",
+      "bytes": 484,
+      "sha256": "c5a1504b5ee1bd047291d62bce424e3c5591988ad356909a1a3fcf0ffbef02aa"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S12.md",
+      "bytes": 491,
+      "sha256": "c647a4095816ad7e6a0600df87ff8e27acfe019bb5abad2d6c1157596f17b54d"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S13.md",
+      "bytes": 478,
+      "sha256": "5f8b395b520c3636f2b0ab8b99ef5ee8a790f8e1b07749a66af466ec542666cc"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S14.md",
+      "bytes": 464,
+      "sha256": "6b2f126085d96804e710e0cc583ef7f73d1eb97f0557323b28999a979043469b"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S15.md",
+      "bytes": 484,
+      "sha256": "e3490d354acb3e7ba7d873fe1028103696f2b915e6d4c9d972560f3e8b88ce13"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S16.md",
+      "bytes": 461,
+      "sha256": "b651da42399bcf2912c97243071a69faf1bd14f0631aece699841bbce960ed40"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S17.md",
+      "bytes": 513,
+      "sha256": "c195638c3be7950d5a800fb5a5a03c8aa76d45fc7aa45e6d2f0c1c7982655ac8"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S18.md",
+      "bytes": 445,
+      "sha256": "4ed8a5e3890abdad3c1e869c94f1d27b8deb7ed88b45013c123bbeb0af469778"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S19.md",
+      "bytes": 543,
+      "sha256": "c1102f3c95bb11a2507dd6e0c9ad6253b15ff8cb27388a006c303b2bb7982a5b"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S20.md",
+      "bytes": 523,
+      "sha256": "0ec8980fb7e5712440eee9ff61c5f1178ded1cc1dafb08a7c9faf48037af821c"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S21.md",
+      "bytes": 524,
+      "sha256": "d3baf4c2ea6dfc7a59de2a37966a5fe87df46d8d6ffa077c792cca05c852ad73"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S22.md",
+      "bytes": 571,
+      "sha256": "e34f7b03a53a55e2bd019b339eee1007468c083a566cc7fafd5e76d467079784"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S23.md",
+      "bytes": 515,
+      "sha256": "2673eb8d02eeae25bb2d21da6c6ad63afd0a8fae2d903390e21adee4a60804af"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S24.md",
+      "bytes": 493,
+      "sha256": "1a50f04d97eb8bfd6104d65d9995f36525bf1cbb3994f8e74fc53ff1a1b601da"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S25.md",
+      "bytes": 467,
+      "sha256": "7c2482fcdd96193786e3acbaffc6f4a43a301dd553e0e133a0bd2aad2bf0fa66"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S26.md",
+      "bytes": 476,
+      "sha256": "4e4fec0c6d4ee8ac415dee7a5207e478f76d704c950aa106129ca326f2b9c63c"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S27.md",
+      "bytes": 479,
+      "sha256": "f4d86723729663a3ae8e491cdb12cb71415a2c65d9253f38ada45f8fddb9f20b"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S28.md",
+      "bytes": 476,
+      "sha256": "e1d364cfa30203f733a90e54f928fa0e6023e0980fe9dd1357f831f95eb37689"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S29.md",
+      "bytes": 484,
+      "sha256": "cdff8541270428e345e49f56535f9bc257ea975c5cd3a68e21a3591f03a2a6f2"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S30.md",
+      "bytes": 511,
+      "sha256": "7d1e3afb2e249fc5e31e98b8f7484016bb83947874618b4125f0dcc26abc4e6e"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S31.md",
+      "bytes": 526,
+      "sha256": "e031c091b1429a9565cd690c784deed18e7d46fdbaeaf1ae735d4563b31e1a27"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S32.md",
+      "bytes": 465,
+      "sha256": "40f47119378ba18c645684e37def58f7fba832c3795ce47c1b77d351659df6af"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S33.md",
+      "bytes": 496,
+      "sha256": "7984ddbd8c720629acccc1c92e239a01c86b39fed79824fe0b3eef1ae78b3f96"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S34.md",
+      "bytes": 470,
+      "sha256": "fe092284ba5093f3a8006db6724a6c51028d3142ce739209e60979c9b6ce2aeb"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S35.md",
+      "bytes": 451,
+      "sha256": "270e16c5e0ac46b738c2ebf0ad125bcdb47f9c3dd87545ea1d3ebfe061a6b9a3"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S36.md",
+      "bytes": 453,
+      "sha256": "edc70b4127c930f84124e6ea068f68508e524e5e2dab713755c091e53e5a9877"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S37.md",
+      "bytes": 487,
+      "sha256": "97791fa4ffd8e4111610cd7693a4977799479198299829cc09eb002cd4e51580"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S38.md",
+      "bytes": 539,
+      "sha256": "1d6d0d231967766cea7f95c6d17a986f74eed2b8c92a6c16b5be8fc215e480d2"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S39.md",
+      "bytes": 436,
+      "sha256": "0bd5f135a4a6172f44d3f3cbd00cb10871fd82d46dbf080e0afd9927195de205"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S40.md",
+      "bytes": 476,
+      "sha256": "261f1ac24ebff543ead833518e2387b9b3ca24cb3deb563b328bcdef66a65e9a"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S41.md",
+      "bytes": 426,
+      "sha256": "ad0c84a58831f8bfa0771259b8ad14532d1fa4f63a0f06f24c1c6d5c546fe329"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S42.md",
+      "bytes": 456,
+      "sha256": "0f56a41cba155f0536c778b7d6b6966fd421d60f8b04bca88ef78d7a61e6ad87"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S43.md",
+      "bytes": 463,
+      "sha256": "4fa781c44d3ee63ace7cf80238b4cf61fe200b7f199cc86a28399d2ce8944c95"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S44.md",
+      "bytes": 457,
+      "sha256": "912ff9b24f3bef83ac22cd69e90d614dea343659f33ea939a06939b326feb842"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S45.md",
+      "bytes": 402,
+      "sha256": "0390f18fe2b5b02ae1336384a332ebc5b70a99781fa5a985bbd9e60f03de44bf"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S46.md",
+      "bytes": 446,
+      "sha256": "b0f582b767f609f263c6288a4380bd4e2281cb116ea6ec33a6b93e184521c1b5"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S47.md",
+      "bytes": 395,
+      "sha256": "275876ffac4a899f94cc658cabe4028422935ce58441f7abb336ad4daea74997"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S48.md",
+      "bytes": 413,
+      "sha256": "f600730da34a3267cc69bbb2b8ff4ed90f82d6919645d0c41f173119451fea89"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S49.md",
+      "bytes": 463,
+      "sha256": "c54141b77f8425557b04389dcda84d38388f0f67eba55de5a1cb47029f7594a7"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S50.md",
+      "bytes": 458,
+      "sha256": "84fa0d74fe331a62eef5bde61b730a7e6e9579d5b87e4b71455d47ce832cce11"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S51.md",
+      "bytes": 530,
+      "sha256": "246c9ecd64badda766591663ce9df0713302fb0ad232e0fc93ef8857640a4957"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S52.md",
+      "bytes": 470,
+      "sha256": "a527798f12ae8eebe2eed4b85b2af0e3aa525aa5d851781562f68d0575560c89"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S53.md",
+      "bytes": 440,
+      "sha256": "b478fd3bc28e0587fe88bbaaadffe0eadfc7324a81fef2fe432efeea4d499828"
+    },
+    {
+      "path": "08_来源与数据/来源卡片/S54.md",
+      "bytes": 475,
+      "sha256": "c2c880d47de98c0ccb2883bcfb821d5f06749220977a8b92eb58f29c11638474"
+    },
+    {
+      "path": "08_来源与数据/检索覆盖记录.json",
+      "bytes": 1922,
+      "sha256": "7aa7d73a982e39c1a900ccc9cc7d5a9921e3abaf8e896354ab5188c5a74115c8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2636,
+      "sha256": "cb07934d5e67c8149ac787843b35ba8bcfdbc81c917a699ef4e32fc8a8d2ae3a"
+    },
+    {
+      "path": "build.py",
+      "bytes": 85177,
+      "sha256": "382557503359d4afab6a3383e376ac0fbbec94b09bf4095d864165f25ffbfc5d"
+    },
+    {
+      "path": "index.html",
+      "bytes": 151097,
+      "sha256": "d63ddff6ad6435e844ac5771eaa197ff8985529c89c8068af836ca2348dd29eb"
+    },
+    {
+      "path": "reader.html",
+      "bytes": 21243,
+      "sha256": "625a19bf328d47b2d50b490b5c89177350010495d095a95cb2b3ee596894b50c"
+    },
+    {
+      "path": "最高_flomo研究资料合订.md",
+      "bytes": 71236,
+      "sha256": "7e062269bde8858ac180dd1d53c970ab2188ca898a53294f4f0ae94304cb352e"
+    }
+  ]
+}
